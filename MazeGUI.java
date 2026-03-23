@@ -43,6 +43,13 @@ public class MazeGUI extends JFrame {
 				}
 				gamePanel.repaint();
 
+				infoPanel.setInfoSteps(
+					currentBoard.getStepCounter().getSteps()
+					);
+				infoPanel.setInfoCoins(
+					engine.getCoinsCollected()
+					);
+				
 				// Check for victory
 				if (engine.playerWins()) {
 					JOptionPane.showMessageDialog(MazeGUI.this,
