@@ -52,6 +52,9 @@ public class MazeGUI extends JFrame {
 				
 				// Check for victory
 				if (engine.playerWins()) {
+					int steps = infoPanel.getInfoSteps();
+					int coins = infoPanel.getInfoCoins();
+					int score = (steps * -1) + (coins * 5);
 					JOptionPane.showMessageDialog(MazeGUI.this,
 							"Congratulations! You found the exit.\nYour got "
 									+ infoPanel.getInfoSteps() * 1 + infoPanel.getInfoCoins()
